@@ -1,104 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>INDEX</title>
-  <meta charset="utf8">
+    <title>Login page</title>
   <style>
-    .table2{
-      border:1px solid black;
-      margin-top:100px;margin-bottom:20;
-      margin-left:auto;margin-right:auto;
-      border-collapse:collapse;
-      width:1000px;
-      table-layout:fixed;
-      height:fixed;
-    }
-    .table2 td{
-      border:3px solid black;
-      padding:2px;
-      text-align:center;
-    }
-    .table1{
-      border:1px solid black;
-      margin-top:50px;
-      margin-left:auto;margin-right:auto;
-      border-collapse:collapse;
-      width:1000px;
-      table-layout:fixed;
-      height:fixed;
-    }
-    .table1 td{
-      border:1px solid black;
-      padding:2px;
+    form{
+      margin-top:300px;
       text-align:center;
     }
   </style>
 </head>
 <body>
-  <table class="table2">
-  <style>
-    a { text-decoration: none; }
-
-  </style>
-    <tr>
-      <td bgcolor="#FAEBD7"><a href="index.html">NEWS</a></td>
-      <td bgcolor="#FAEBD7"><a href="index.html">ARTE</a></td>
-      <td bgcolor="#FAEBD7"><a href="index.html">FOOD</a></td>
-      <td bgcolor="#FAEBD7"><a href="index.html">TOGO</a></td>
-      <td bgcolor="#FAEBD7"><a href="index.html">MORE</a></td>
-     <tr>
-  <table class="table1">
-    <thead>
-      <tr>
-        <td width="15%"><b><small>CATEGORY</td>
-        <td><b><small>TITLE</td>
-        <td width="10%"><b><small>YYMMDD</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="title01.html">title01</a></td>
-        <td>000000</td>
-      </tr>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="title02.html">title02</a></td>
-        <td>000000</td>
-      </tr>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="">---</a></td>
-        <td>000000</td>
-      </tr>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="">---</a></td>
-        <td>000000</td>
-      </tr>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="">---</a></td>
-        <td>000000</td>
-      </tr>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="">---</a></td>
-        <td>000000</td>
-      </tr>
-      <tr>
-        <td>AAAA</td>
-        <td><a href="">---</a></td>
-        <td>000000</td>
-      </tr>
-
-    </tbody>
-  </table>
-  <h1> </h1>
-  <p>
-
-  </p>
-
+<form>
+    <label for="pswd">Enter your password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is porunacabeza-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "porunacabeza";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="index.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
 </body>
-
 </html>
